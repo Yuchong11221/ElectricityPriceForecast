@@ -9,7 +9,7 @@ import pytz
 ########## Change only this
 
 # Group secret
-secret = "42"
+secret = "g078lcl"
 # Group port, change the last two digits to your group number
 port = 39007
 # Path to your python file containing the prediction
@@ -24,13 +24,13 @@ warnings.simplefilter(action='ignore', category=FutureWarning)
 
 # Functions that are used to get your predictions
 def predict_hour():
-    Value = predicition(choose_date = str(datetime.now().date()), choose_hour=int(datetime.now().hour))
+    Value, predict_df= predicition(choose_date = str(datetime.now().date()), choose_hour=int(datetime.now().hour))
     return Value[0][0]
 def predict_day():
-    Value = predicition(choose_date = str(datetime.now().date()), choose_hour=int(datetime.now().hour))
+    Value, predict_df = predicition(choose_date = str(datetime.now().date()), choose_hour=int(datetime.now().hour))
     return Value[23][0]
 def predict_week():
-    Value = predicition(choose_date = str(datetime.now().date()), choose_hour=int(datetime.now().hour))
+    Value, predict_df = predicition(choose_date = str(datetime.now().date()), choose_hour=int(datetime.now().hour))
     return Value[-1][0]
 
 ##########
